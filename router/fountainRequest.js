@@ -7,6 +7,6 @@ const jwtVerfier = require("../helper/jwtverifier")
 router.use(["/gardenData", "/fountainRequest"], jwtVerfier)
 
 router.post("/fountainRequest", fountainRequestValidator, save, fountainRequestController.createFountainRequest)
-router.get("/fountainRequest", fountainRequestValidator, get, fountainRequestController.getFountainRequest)
+router.get("/fountainRequest", get, fountainRequestController.getFountainRequest)
 
 module.exports = router
